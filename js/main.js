@@ -153,6 +153,7 @@ function displayProductDetail() {
 
   addtoCartBtn.addEventListener("click", () => {
     addtoCart(productData, selectedColor, selectedSize);
+        window.location.href = "cart.html";
   });
 }
 
