@@ -285,44 +285,44 @@ console.log(updateCartBadge());
 // -----------------End------------------
 
 // start
-// document
-//   .querySelector("#place-order-btn")
-//   .addEventListener("click", sendOrderToWhatsApp);
+document
+  .querySelector("#place-order-btn")
+  .addEventListener("click", sendOrderToWhatsApp);
 
-// function sendOrderToWhatsApp() {
-//   const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+function sendOrderToWhatsApp() {
+  const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
-//   if (cart.length === 0) {
-//     alert("Your cart is empty.");
-//     return;
-//   }
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
 
-//   let message = "🛒 *New Order Received!*\n\n";
+  let message = "🛒 *New Order Received!*\n\n";
 
-//   cart.forEach((item, index) => {
-//     message += `#${index + 1}\n`;
-//     message += `*Product:* ${item.title}\n`;
-//     message += `*Price:* ${item.price}\n`;
-//     message += `*Color:* ${item.color}\n`;
-//     message += `*Size:* ${item.size}\n`;
-//     message += `*Quantity:* ${item.quantity}\n\n`;
-//   });
+  cart.forEach((item, index) => {
+    message += `#${index + 1}\n`;
+    message += `*Product:* ${item.title}\n`;
+    message += `*Price:* ${item.price}\n`;
+    message += `*Color:* ${item.color}\n`;
+    message += `*Size:* ${item.size}\n`;
+    message += `*Quantity:* ${item.quantity}\n\n`;
+  });
 
-//   const subtotal = cart.reduce(
-//     (total, item) =>
-//       total + parseFloat(item.price.replace("$", "")) * item.quantity,
-//     0
-//   );
-//   message += `💰 *Total:* $${subtotal.toFixed(2)}\n`;
+  const subtotal = cart.reduce(
+    (total, item) =>
+      total + parseFloat(item.price.replace("$", "")) * item.quantity,
+    0
+  );
+  message += `💰 *Total:* $${subtotal.toFixed(2)}\n`;
 
-//   const phone = "21256464401"; // <-- your WhatsApp number here
-//   const encodedMsg = encodeURIComponent(message);
-//   const url = `https://wa.me/${phone}?text=${encodedMsg}`;
-//   window.open(url, "_blank");
+  const phone = "21256464401"; // <-- your WhatsApp number here
+  const encodedMsg = encodeURIComponent(message);
+  const url = `https://wa.me/${phone}?text=${encodedMsg}`;
+  window.open(url, "_blank");
 
-//   // Optional: Clear cart after sending
-//   sessionStorage.removeItem("cart");
-//   updateCartBadge();
-// }
+  // Optional: Clear cart after sending
+  sessionStorage.removeItem("cart");
+  updateCartBadge();
+}
 
-// end
+end
