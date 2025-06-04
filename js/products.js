@@ -1,3 +1,5 @@
+
+
 const products = [
   {
     id: 1,
@@ -111,15 +113,24 @@ const products = [
       {
         name: "red",
         mainImage: "images/san-2.jpg",
-        thumbnails: ["images/san-3.jpg", "images/san-1.jpg", "images/san-6.jpg"],
+        thumbnails: [
+          "images/san-3.jpg",
+          "images/san-1.jpg",
+          "images/san-6.jpg",
+        ],
         sizes: ["40", "41", "42", "43"],
       },
       {
         name: "black",
         mainImage: "images/san-5.jpg",
-        thumbnails: ["images/san-2.jpg", "images/san-3.jpg", "images/san-4.jpg"],
+        thumbnails: [
+          "images/san-2.jpg",
+          "images/san-3.jpg",
+          "images/san-4.jpg",
+        ],
         sizes: ["40", "41", "42", "43"],
       },
     ],
   },
-];
+]; // -----------------End------------------
+

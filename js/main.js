@@ -153,7 +153,7 @@ function displayProductDetail() {
 
   addtoCartBtn.addEventListener("click", () => {
     addtoCart(productData, selectedColor, selectedSize);
-        window.location.href = "cart.html";
+    window.location.href = "cart.html";
   });
 }
 
@@ -284,10 +284,16 @@ updateCartBadge();
 console.log(updateCartBadge());
 // -----------------End------------------
 
-// start
-document
-  .querySelector("#place-order-btn")
-  .addEventListener("click", sendOrderToWhatsApp);
+
+// Start whatsapp
+// ----------------- Start WhatsApp Order Function ------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const orderBtn = document.getElementById("place-order-btn");
+  if (orderBtn) {
+    orderBtn.addEventListener("click", sendOrderToWhatsApp);
+  }
+});
 
 function sendOrderToWhatsApp() {
   const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
@@ -308,21 +314,25 @@ function sendOrderToWhatsApp() {
     message += `*Quantity:* ${item.quantity}\n\n`;
   });
 
-  const subtotal = cart.reduce(
-    (total, item) =>
-      total + parseFloat(item.price.replace("$", "")) * item.quantity,
-    0
-  );
-  message += `💰 *Total:* $${subtotal.toFixed(2)}\n`;
+  const total = cart.reduce((sum, item) => {
+    const price = parseFloat(item.price.replace(/[^0-9.]/g, ""));
+    return sum + price * item.quantity;
+  }, 0);
 
-  const phone = "21256464401"; // <-- your WhatsApp number here
-  const encodedMsg = encodeURIComponent(message);
-  const url = `https://wa.me/${phone}?text=${encodedMsg}`;
-  window.open(url, "_blank");
+  message += `💰 *Total:* ${total.toFixed(2)} DH`;
 
-  // Optional: Clear cart after sending
+  const phone = "21256464401"; // Replace with your WhatsApp number
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  // Optional: clear the cart after sending
   sessionStorage.removeItem("cart");
   updateCartBadge();
+  displayCart();
 }
 
-end
+// ----------------- End WhatsApp Order Function ------------------
+ 
+// End whatsapp 
