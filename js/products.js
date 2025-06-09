@@ -132,5 +132,88 @@ const products = [
       },
     ],
   },
+    {
+    id: 6,
+    title: "Men's shoes MDL",
+    price: "299 DH",
+    description: "Stylish and comfortable MDL",
+    colors: [
+      {
+        name: "red",
+        mainImage: "images/g-3.jpg",
+        thumbnails: [
+          "images/san-3.jpg",
+          "images/san-1.jpg",
+          "images/san-6.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+      {
+        name: "black",
+        mainImage: "images/san-5.jpg",
+        thumbnails: [
+          "images/san-2.jpg",
+          "images/san-3.jpg",
+          "images/san-4.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+    ],
+  },
+    {
+    id: 7,
+    title: "Men's shoes MDL",
+    price: "299 DH",
+    description: "Stylish and comfortable MDL",
+    colors: [
+      {
+        name: "red",
+        mainImage: "images/g-1.jpg",
+        thumbnails: [
+          "images/san-3.jpg",
+          "images/san-1.jpg",
+          "images/san-6.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+      {
+        name: "black",
+        mainImage: "images/san-5.jpg",
+        thumbnails: [
+          "images/san-2.jpg",
+          "images/san-3.jpg",
+          "images/san-4.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+    ],
+  },
+    {
+    id: 8,
+    title: "Men's shoes MDL",
+    price: "299 DH",
+    description: "Stylish and comfortable MDL",
+    colors: [
+      {
+        name: "red",
+        mainImage: "images/san-6-photo.jpg",
+        thumbnails: [
+          "images/san-3.jpg",
+          "images/san-1.jpg",
+          "images/san-6.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+      {
+        name: "black",
+        mainImage: "images/san-5.jpg",
+        thumbnails: [
+          "images/san-2.jpg",
+          "images/san-3.jpg",
+          "images/san-4.jpg",
+        ],
+        sizes: ["40", "41", "42", "43"],
+      },
+    ],
+  },
 ]; // -----------------End------------------
-
