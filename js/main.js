@@ -10,7 +10,7 @@ let backgroundInterval;
 let landingPage = document.querySelector(".landing");
 
 //Get Array Of Imgs
-let imgsArray = ["landing-1.jpg", "landing-2.jpg", "landing-s-3.jpg"];
+let imgsArray = ["landing-01.jpg", "landing-02.jpg","landing-03.jpg"];
 
 // function To Randomize Background Images
 function randomizeImgs() {
@@ -286,55 +286,6 @@ console.log(updateCartBadge());
 
 
 
-// ----------------- start WhatsApp Order Function ------------------
-// document.addEventListener("DOMContentLoaded", function () {
-//   const orderBtn = document.getElementById("place-order-btn");
-
-//   if (!orderBtn) return;
-
-//   orderBtn.addEventListener("click", function () {
-//     const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-//     if (cart.length === 0) {
-//       alert("Your cart is empty.");
-//       return;
-//     }
-
-//     let message = "*🛒 New Order Received!*\n\n";
-
-//     cart.forEach((item, index) => {
-//       message += `#${index + 1}\n`;
-//       message += `*Product:* ${item.title}\n`;
-//       message += `*Price:* ${item.price}\n`;
-//       message += `*Color:* ${item.color}\n`;
-//       message += `*Size:* ${item.size}\n`;
-//       message += `*Quantity:* ${item.quantity}\n\n`;
-//     });
-
-//     const total = cart.reduce((sum, item) => {
-//       const priceNum = parseFloat(item.price.replace("DH", "").replace("$", "").trim());
-//       return sum + priceNum * item.quantity;
-//     }, 0);
-
-//     message += `*Total:* ${total.toFixed(2)} DH`;
-
-//     const phone = "212656464401"; // Morocco format without leading zero
-//     const encodedMessage = encodeURIComponent(message);
-//     const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
-
-//     window.open(whatsappURL, "_blank");
-
-//     // Optional: Clear cart after sending
-//     sessionStorage.removeItem("cart");
-
-//     if (typeof updateCartBadge === "function") updateCartBadge();
-//     if (typeof displayCart === "function") displayCart();
-//   });
-// });
-
-
-// -----------------End------------------
-
 document.addEventListener("DOMContentLoaded", function () {
   const orderBtn = document.getElementById("place-order-btn");
 
@@ -356,11 +307,15 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Your cart is empty.");
       return;
     }
+    // if (!/^\d{10,12}$/.test(phoneNumber)) {
+    //   alert("Please enter a valid phone number (10 to 12 digits).");
+    //   return;
+    // }
 
     let message = "*🛒 New Order Received!*\n\n";
     message += `*👤 Name:* ${name}\n`;
     message += `*📍 City:* ${city}\n`;
-    message += `*📞 Phone:* ${phoneNumber}\n\n`;
+    message += `*📞 Phone:*${phoneNumber}\n\n`;
 
     cart.forEach((item, index) => {
       message += `#${index + 1}\n`;
@@ -372,7 +327,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const total = cart.reduce((sum, item) => {
-      const priceNum = parseFloat(item.price.replace("DH", "").replace("$", "").trim());
+      const priceNum = parseFloat(
+        item.price.replace("DH", "").replace("$", "").trim()
+      );
       return sum + priceNum * item.quantity;
     }, 0);
 
@@ -391,4 +348,3 @@ document.addEventListener("DOMContentLoaded", function () {
     if (typeof displayCart === "function") displayCart();
   });
 });
-
