@@ -323,7 +323,7 @@ ul {
   color: #707070;
 }
 @media (max-width: 767px) {
-  .product-detail .description  {
+  .product-detail .description {
     font-size: 20px;
   }
 }
@@ -388,7 +388,7 @@ ul {
   font-size: 20px;
 }
 @media (max-width: 767px) {
-  .product-detail .product-policy p  {
+  .product-detail .product-policy p {
     font-size: 15px;
   }
 }
@@ -555,14 +555,14 @@ ul {
 .customer-info {
   display: flex;
   flex-direction: column;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 .customer-info input {
   font-size: 20px;
-  border: 2px solid #9999;
+  border: 1px solid #c8c8c8;
   width: 100%;
   padding: 15px 15px;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 .customer-info input:focus {
   outline: none;
@@ -573,7 +573,7 @@ ul {
 }
 @media (max-width: 767px) {
   .customer-info input {
-    padding: 10px;
+    padding: 5px;
     font-size: 15px;
   }
 }
