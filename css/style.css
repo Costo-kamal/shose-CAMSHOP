@@ -13,7 +13,7 @@ body {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  height: 140vh;
+
 }
 a {
   text-decoration: none;
@@ -282,6 +282,15 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   padding: 130px 9% 30px;
+ 
+  min-height: 160vh;
+  
+}
+
+@media (max-width: 767px) {
+  .product-detail  {
+     min-height: 0;
+  }
 }
 .product-detail .product-img {
   display: grid;
@@ -388,6 +397,9 @@ ul {
   font-size: 20px;
 }
 @media (max-width: 767px) {
+  .product-detail .product-policy {
+    margin-bottom: 100px;
+  }
   .product-detail .product-policy p {
     font-size: 15px;
   }
@@ -417,6 +429,7 @@ ul {
 /* cart start  */
 .cart {
   padding: 110px 9% 30px;
+  margin-bottom: 160px;
 }
 .cart-header {
   display: flex;
@@ -521,7 +534,7 @@ ul {
 @media (max-width: 767px) {
   .cart {
     font-size: 10px;
-    margin: 0 auto;
+    margin: 0  auto 100px;
   }
 
   .cart-total {
@@ -622,13 +635,15 @@ ul {
   text-align: center;
   font-weight: bold;
   border-top: 1px solid #cccc;
+  
+  
 }
 .footer span a {
   list-style: none;
 }
 
 .footer span i {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 5px;
 }
 .footer span i.facebook {
@@ -636,5 +651,14 @@ ul {
 }
 .footer span i.instagram {
   color: #fd1d1d;
+}
+.footer span i.whatsapp {
+  color: #075e54;
+}
+@media (max-width:767px){
+  .footer span i {
+  font-size: 15px;
+  margin-right: 5px;
+}
 }
 /* End footer  */

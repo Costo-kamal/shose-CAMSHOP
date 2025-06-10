@@ -1,9 +1,10 @@
 const products = [
   {
     id: 1,
-    title: "Men's shoes M B",
+    title: " TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -42,9 +43,10 @@ const products = [
   },
   {
     id: 2,
-    title: "Men's shoes M W",
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -83,9 +85,10 @@ const products = [
   },
   {
     id: 3,
-    title: "Men's shoes M G",
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "grey",
@@ -123,10 +126,11 @@ const products = [
     ],
   },
   {
-    id: 1,
-    title: "Men's shoes M B",
+    id: 4,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -164,10 +168,11 @@ const products = [
     ],
   },
   {
-    id: 2,
-    title: "Men's shoes M W",
+    id: 5,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -205,10 +210,11 @@ const products = [
     ],
   },
   {
-    id: 3,
-    title: "Men's shoes M G",
+    id: 6,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "grey",
@@ -246,10 +252,11 @@ const products = [
     ],
   },
   {
-    id: 1,
-    title: "Men's shoes M B",
+    id: 7,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description:
+      "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -287,10 +294,10 @@ const products = [
     ],
   },
   {
-    id: 2,
-    title: "Men's shoes M W",
+    id: 8,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description: "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "white",
@@ -328,10 +335,10 @@ const products = [
     ],
   },
   {
-    id: 3,
-    title: "Men's shoes M G",
+    id: 9,
+    title: "TEXLINA Homme Sport",
     price: "229 DH",
-    description: "iهدا المنتج مصنوع من جلد طبيعي عالي الجودة",
+    description: "حذاء رياضي يجمع بين الخفة والمرونة، مناسب للحركة السريعة والاستخدام اليومي.",
     colors: [
       {
         name: "grey",
