@@ -10,7 +10,7 @@ let backgroundInterval;
 let landingPage = document.querySelector(".landing");
 
 //Get Array Of Imgs
-let imgsArray = ["landing-01.jpg", "landing-02.jpg","landing-03.jpg"];
+let imgsArray = ["landing-01.jpg", "landing-02.jpg", "landing-03.jpg"];
 
 // function To Randomize Background Images
 function randomizeImgs() {
@@ -195,9 +195,9 @@ function displayCart() {
   cartItemsContainer.innerHTML = "";
 
   if (cart.length === 0) {
-    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
-    subtotalEl.textContent = "$0";
-    grandTotalEl.textContent = "$0";
+    cartItemsContainer.innerHTML = "<p>سلة التسوق الخاصة بك فارغة</p>";
+    subtotalEl.textContent = "0 DH";
+    grandTotalEl.textContent = "0 DH";
     return;
   }
 
@@ -284,8 +284,6 @@ updateCartBadge();
 console.log(updateCartBadge());
 // -----------------End------------------
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const orderBtn = document.getElementById("place-order-btn");
 
@@ -297,14 +295,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneNumber = document.getElementById("customer-phone").value.trim();
 
     if (!name || !city || !phoneNumber) {
-      alert("Please fill in your name, city, and phone number.");
+      alert(
+        "حتى نتمكن من خدمتك بشكل أفضل، يرجى تزويدنا باسمك، المدينة، ورقم الهاتف."
+      );
       return;
     }
 
     const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
-      alert("Your cart is empty.");
+      alert("سلتك فارغة.");
       return;
     }
     // if (!/^\d{10,12}$/.test(phoneNumber)) {
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const total = cart.reduce((sum, item) => {
       const priceNum = parseFloat(
-        item.price.replace("DH", "").replace("$", "").trim()
+        item.price.replace("DH", "").replace("DH", "").trim()
       );
       return sum + priceNum * item.quantity;
     }, 0);

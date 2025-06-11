@@ -9,11 +9,10 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cairo", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-
 }
 a {
   text-decoration: none;
@@ -229,6 +228,7 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   flex-wrap: wrap;
+
 }
 
 @media (max-width: 767px) {
@@ -282,14 +282,12 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   padding: 130px 9% 30px;
- 
   min-height: 160vh;
-  
 }
 
 @media (max-width: 767px) {
-  .product-detail  {
-     min-height: 0;
+  .product-detail {
+    min-height: 0;
   }
 }
 .product-detail .product-img {
@@ -515,7 +513,7 @@ ul {
 .cart-total p:last-of-type {
   font-weight: bold;
 }
-.cart-total .btn {
+/* .cart-total .btn {
   display: block;
   padding: 12px 30px;
   margin: 30px 0 0 auto;
@@ -529,12 +527,43 @@ ul {
   background: #e06b2c;
   color: #fff;
   cursor: pointer;
+} */
+  
+.place-order {
+  background-color: #25d366; 
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 0;
+  display: block;
+  text-align: center;
+}
+
+.place-order:hover {
+  background-color: #1ebe57;
+}
+
+.customer-info input {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: inset 1px 1px 3px #eee;
+}
+
+.cart-total {
+  max-width: 450px;
+  margin-left: auto;
 }
 
 @media (max-width: 767px) {
   .cart {
     font-size: 10px;
-    margin: 0  auto 100px;
   }
 
   .cart-total {
@@ -589,7 +618,15 @@ ul {
     padding: 5px;
     font-size: 15px;
   }
+  .cart-total {
+    max-width: 100%;
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
 }
+
+
+
 
 .offer {
   position: relative;
@@ -628,15 +665,21 @@ ul {
 }
 /* End offer  */
 /* Start footer  */
-.footer {
+.footer-info {
   background-color: #f8f1e1;
   color: #000;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  font-weight: bold;
+
   border-top: 1px solid #cccc;
-  
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-info p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
 }
 .footer span a {
   list-style: none;
@@ -655,10 +698,25 @@ ul {
 .footer span i.whatsapp {
   color: #075e54;
 }
-@media (max-width:767px){
-  .footer span i {
-  font-size: 15px;
-  margin-right: 5px;
+.footer .policy {
+  font-size: 10px;
 }
+.footer .policy a {
+  text-decoration: underline;
+  color: #000;
+  padding: 0 10px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .footer-info {
+    flex-direction: column;
+  }
+  .social-media {
+    margin: 10px auto;
+  }
+  .footer span i {
+    font-size: 15px;
+    margin-right: 5px;
+  }
 }
 /* End footer  */
